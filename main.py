@@ -136,4 +136,6 @@ def predict_sales():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(host="10.0.11.83", port=5000)
+    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(host="10.0.11.83", port=5000)
