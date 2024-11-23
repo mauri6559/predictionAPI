@@ -72,6 +72,11 @@ def generar_grafico_barras(fechas, predicciones, producto_seleccionado):
     plt.close()
     return base64.b64encode(img.getvalue()).decode('utf-8')
 
+@app.route('/')
+def index():
+    return "API de predicción de ventas en funcionamiento"
+
+
 @app.route('/predict', methods=['POST'])
 def predict_sales():
     try:
